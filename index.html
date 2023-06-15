@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CG Chat Client</title>
+    <meta name="description" content="CG Chat Client">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./public/favicon.ico">
+
+  </head>
+  <body>
+    <div id='ui'>
+      <div class = "row">
+        <div class = "col-md-7 col-sm-12 title">
+          <h1>CG Chat API Client</h1>
+          
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="API Secret" aria-label="API Secret" id="apisecret">
+          </div>
+         
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="API Key" aria-label="API Key" id="apikey">
+          </div>
+          
+          <div class="input-group mb-3" id="startchat">
+            <button type="button" class="btn btn-primary" onclick="startChat()">Start Chat</button>       
+          </div>
+               
+        </div>
+        <div class ="d-grid gap-3" id="chatMessages"></div>
+        <div class="col-md-7 col-sm-12 display" id="display"></div>  
+        
+      </div>
+      <footer class="page-footer">
+        <div class="footer-copyright text-center py-1">
+          © Made with ❤️ By Forstner Consulting GmbH
+        </div>
+      </footer>
+     </div> 
+   
+    <script src="./assets/client.js"></script>     
+  </body>
+</html>
