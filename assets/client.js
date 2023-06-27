@@ -4,13 +4,13 @@ var chatId = null;
 var apiSecret = null;
 var apiKey = null;
 var lastMessageId = null;
-
+var url = 'https://d2xxfbrgwc4lr6.cloudfront.net'
 const interval = setInterval(async function(){
 
 
     if (chatId != null)
     {
-        const response = await fetch('https://timeforstorm.eu/chat/api/v1/chats/' + chatId + '/messages',{
+        const response = await fetch(url + '/chat/api/v1/chats/' + chatId + '/messages',{
             method: "GET",
             headers: {
                 "Content-Type" : "application/json",
@@ -44,7 +44,7 @@ async function startChat(){
             "subject": "New Chat with Agent",
             "additionalData": "Additional Data"
     } 
-    const response = await fetch('https://timeforstorm.eu/chat/api/v1/chats/',{
+    const response = await fetch(url+'/chat/api/v1/chats/',{
         method: "PUT",
         headers: {
             "Content-Type" : "application/json",
@@ -77,7 +77,7 @@ async function sendMessage(){
         ]
     }
  
-    const response = await fetch('https://timeforstorm.eu/chat/api/v1/chats/' + chatId + '/messages',{
+    const response = await fetch(url + '/chat/api/v1/chats/' + chatId + '/messages',{
         method: "POST",
         headers: {
             "Content-Type" : "application/json",
