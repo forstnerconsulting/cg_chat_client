@@ -4,7 +4,7 @@ var chatId = null;
 var apiSecret = null;
 var apiKey = null;
 var lastMessageId = null;
-var url = 'https://d2xxfbrgwc4lr6.cloudfront.net'
+var url = 'https://timeforstorm.eu'
 const interval = setInterval(async function(){
 
 
